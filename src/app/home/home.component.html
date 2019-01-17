@@ -1,0 +1,18 @@
+<!-- this is how you apply single style to elements based on an attributes true or false conditon 
+
+<h1 [ngClass]="{
+  'red': h1style, 
+  'green': !h1style
+}">Home</h1>
+
+<h2 [style.color]="h1style ? 'gray': 'green'">serewrfee</h2>
+-->
+
+<h1>Home</h1>
+
+<ul *ngIf="users">
+  <li *ngFor="let user of users.data">
+    <img [src]="user.avatar">
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+  </li>
+</ul>
